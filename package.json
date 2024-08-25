@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass sass/main.scss sass/main.css",
-    "build": "npm run compile:sass",
+    "build": "npm run build",
     "start": "npm run build"
   },
   "author": "",
