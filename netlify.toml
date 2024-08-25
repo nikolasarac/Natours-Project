@@ -1,4 +1,22 @@
 [build]
-  base = "/"  # Base directory for your project
-  publish = "public"  # Directory to publish (e.g., where your static files are)
-  command = "npm run build"  # Command to build your site
+  # The base directory is where your project files are located
+  base = ""  # leave empty if the main directory is the root
+  publish = "dist"  # the directory that Netlify will deploy (output of your build)
+  command = "npm run build"  # the command to build the project
+
+# Redirects for Single Page Applications (SPA), if applicable
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Custom headers (optional, for security or performance)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+# Netlify functions configuration (if you're using any serverless functions)
+[[functions]]
+  directory = "netlify/functions"  # Location of your Netlify Functions
