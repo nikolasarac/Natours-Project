@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass sass/main.scss sass/main.css",
-    "build": "npm run build",
-    "start": "npm run build"
+    "build": "npm run build"
   },
   "author": "",
   "license": "ISC",
