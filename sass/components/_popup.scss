@@ -4,10 +4,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba($color-black, 0.8);
+  background-color: rgba($color-black, 0.3);
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
+  backdrop-filter: blur(10px);
 
   &__content {
     @include absCenter;
